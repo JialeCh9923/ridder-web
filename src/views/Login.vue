@@ -1,5 +1,10 @@
 <template>
   <div class="min-h-screen flex items-center justify-center relative overflow-hidden md:px-4 md:py-12">
+    <!-- Theme Switcher - Fixed Position -->
+    <div class="fixed top-4 right-4 md:top-6 md:right-6 z-50">
+      <ThemeSwitcher />
+    </div>
+    
     <!-- Enhanced Animated Background -->
     <div class="absolute inset-0">
       <!-- Base Gradient -->
@@ -47,12 +52,12 @@
 
         <form @submit.prevent="handleLogin" class="space-y-4">
           <div class="space-y-1.5 animate-slide-in-right" style="animation-delay: 0.3s;">
-            <label for="email" class="block text-sm font-semibold mb-1.5 dark:text-gray-300" style="color: #1e3a5f;">
+            <label for="email" class="block text-sm font-semibold mb-1.5 dark:text-ridder-teal" >
               邮箱 / Email
             </label>
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <svg class="w-5 h-5" style="color: #1e3a5f;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <svg class="w-5 h-5"  fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
@@ -69,12 +74,12 @@
           </div>
 
           <div class="space-y-1.5 animate-slide-in-right" style="animation-delay: 0.4s;">
-            <label for="password" class="block text-sm font-semibold mb-1.5 dark:text-gray-300" style="color: #1e3a5f;">
+            <label for="password" class="block text-sm font-semibold mb-1.5 dark:text-ridder-teal" >
               密码 / Password
             </label>
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <svg class="w-5 h-5" style="color: #1e3a5f;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <svg class="w-5 h-5"  fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
@@ -124,7 +129,7 @@
 
         <div class="mt-5 text-center">
           <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg" style="background: rgba(30, 58, 95, 0.05);">
-            <svg class="w-4 h-4" style="color: #14b8a6;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <svg class="w-4 h-4"  fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <p class="text-xs text-ridder-grey">演示账户：任意邮箱和密码即可登录</p>
@@ -150,12 +155,12 @@
 
         <form @submit.prevent="handleLogin" class="space-y-4">
         <div class="space-y-1.5">
-          <label for="email-mobile" class="block text-sm font-semibold mb-1.5 dark:text-gray-300" style="color: #1e3a5f;">
+          <label for="email-mobile" class="block text-sm font-semibold mb-1.5 dark:text-ridder-teal" >
             邮箱 / Email
           </label>
           <div class="relative">
             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <svg class="w-5 h-5" style="color: #1e3a5f;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <svg class="w-5 h-5"  fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
@@ -172,12 +177,12 @@
         </div>
 
         <div class="space-y-1.5">
-          <label for="password-mobile" class="block text-sm font-semibold mb-1.5 text-ridder-blue dark:text-gray-300">
+          <label for="password-mobile" class="block text-sm font-semibold mb-1.5  dark:text-ridder-teal">
             密码 / Password
           </label>
           <div class="relative">
             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <svg class="w-5 h-5 text-ridder-blue dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <svg class="w-5 h-5  dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </div>
@@ -242,6 +247,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import Logo from '@/components/Logo.vue'
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 
 const router = useRouter()
 const authStore = useAuthStore()

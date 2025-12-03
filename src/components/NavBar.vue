@@ -41,12 +41,12 @@
                 {{ userInitials }}
               </div>
               <div class="hidden md:block">
-                <span class="text-sm font-semibold block dark:text-gray-100" style="color: #1e3a5f;">{{ authStore.user?.name }}</span>
-                <span class="text-xs font-medium dark:text-ridder-teal-light" style="color: #14b8a6;">{{ authStore.user?.brokerLevel }}</span>
+                <span class="text-sm font-semibold block dark:text-gray-100">{{ authStore.user?.name }}</span>
+                <span class="text-xs font-medium dark:text-ridder-teal-light" >{{ authStore.user?.brokerLevel }}</span>
               </div>
             </div>
             <button
-              @click="handleLogout"
+              @click="handleLogoutClick"
               class="logout-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-md transform hover:scale-105 active:scale-95 border-2"
             >
               登出
@@ -55,11 +55,39 @@
         </div>
       </div>
     </div>
+    
+    <!-- Logout Confirmation Modal -->
+    <Teleport to="body">
+      <div
+        v-if="showLogoutConfirm"
+        class="fixed inset-0 bg-black/50 dark:bg-black/70 flex items-center justify-center z-[100] p-4"
+        @click.self="showLogoutConfirm = false"
+      >
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl max-w-sm w-full p-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">确认登出</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">您确定要登出吗？</p>
+          <div class="flex space-x-3">
+            <button
+              @click="showLogoutConfirm = false"
+              class="flex-1 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+            >
+              取消
+            </button>
+            <button
+              @click="confirmLogout"
+              class="flex-1 px-4 py-2 text-sm font-medium text-white bg-red-600 dark:bg-red-500 rounded-lg hover:bg-red-700 dark:hover:bg-red-600 transition-colors"
+            >
+              确认登出
+            </button>
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </nav>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import Logo from '@/components/Logo.vue'
@@ -69,12 +97,19 @@ const router = useRouter()
 const route = useRoute()
 const authStore = useAuthStore()
 
+const showLogoutConfirm = ref(false)
+
 const userInitials = computed(() => {
   const name = authStore.user?.name || 'U'
   return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
 })
 
-const handleLogout = () => {
+const handleLogoutClick = () => {
+  showLogoutConfirm.value = true
+}
+
+const confirmLogout = () => {
+  showLogoutConfirm.value = false
   authStore.logout()
   router.push('/login')
 }

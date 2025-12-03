@@ -6,21 +6,21 @@
         <div class="flex items-center justify-between mb-4 md:mb-6">
           <div class="flex-1">
             <h1 class="text-2xl md:text-5xl font-bold mb-2 md:mb-3 tracking-tight">
-              <span class="text-ridder-blue">欢迎回来</span>,
-              <span class="text-ridder-blue">{{ authStore.user?.name }}</span>
+              <span class="">欢迎回来</span>,
+              <span class="">{{ authStore.user?.name }}</span>
             </h1>
             <p class="text-ridder-grey dark:text-gray-400 text-xs md:text-base font-medium">您的经纪人钱包概览</p>
           </div>
           <div class="hidden md:flex items-center space-x-3 px-5 py-2.5 bg-white dark:bg-gray-800 rounded-xl border shadow-sm dark:border-gray-700"
             style="border-color: rgba(20, 184, 166, 0.3); background: linear-gradient(to right, rgba(30, 58, 95, 0.05), rgba(20, 184, 166, 0.05));">
             <div class="w-2.5 h-2.5 rounded-full animate-pulse" style="background-color: #14b8a6;"></div>
-            <span class="text-sm font-semibold text-ridder-blue dark:text-gray-200">在线</span>
+            <span class="text-sm font-semibold  dark:text-gray-200">在线</span>
           </div>
           <!-- Mobile Status Badge -->
           <div class="md:hidden flex items-center space-x-2 px-3 py-1.5 bg-white dark:bg-gray-800 rounded-lg border shadow-sm dark:border-gray-700"
             style="border-color: rgba(20, 184, 166, 0.3); background: linear-gradient(to right, rgba(30, 58, 95, 0.05), rgba(20, 184, 166, 0.05));">
             <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: #14b8a6;"></div>
-            <span class="text-xs font-semibold text-ridder-blue dark:text-gray-200">在线</span>
+            <span class="text-xs font-semibold  dark:text-gray-200">在线</span>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@
         style="animation-delay: 0.4s;">
         <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-100 dark:border-gray-700">
           <div>
-            <h2 class="text-xl md:text-2xl font-bold text-ridder-blue dark:text-ridder-teal-light mb-1">经纪人计划详情</h2>
+            <h2 class="text-xl md:text-2xl font-bold  dark:text-ridder-teal-light mb-1">经纪人计划详情</h2>
             <p class="text-xs text-ridder-grey dark:text-gray-400 font-medium">Broker Program Details</p>
           </div>
           <div class="w-10 h-1 rounded-full" style="background: linear-gradient(90deg, #1e3a5f 0%, #14b8a6 100%);">
@@ -131,7 +131,7 @@
               <tr v-for="(plan, index) in brokerPlans" :key="plan.name"
                 class="table-row hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all duration-300 cursor-pointer group">
                 <td class="px-6 py-5 whitespace-nowrap">
-                  <span class="font-bold text-xl text-ridder-blue dark:text-ridder-teal-light">
+                  <span class="font-bold text-xl  dark:text-ridder-teal-light">
                     {{ plan.name }}
                   </span>
                 </td>
@@ -163,14 +163,14 @@
       <div class="md:hidden space-y-4 mb-6">
         <div class="flex items-center justify-between mb-4">
           <div>
-            <h2 class="text-lg font-bold text-ridder-blue dark:text-ridder-teal-light mb-0.5">经纪人计划详情</h2>
+            <h2 class="text-lg font-bold  dark:text-ridder-teal-light mb-0.5">经纪人计划详情</h2>
             <p class="text-xs text-ridder-grey dark:text-gray-400 font-medium">Broker Program Details</p>
           </div>
         </div>
         <div v-for="plan in brokerPlans" :key="plan.name"
           class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 p-5 animate-fade-in-up touch-manipulation">
           <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100 dark:border-gray-700">
-            <span class="font-bold text-lg text-ridder-blue dark:text-ridder-teal-light">{{ plan.name }}</span>
+            <span class="font-bold text-lg  dark:text-ridder-teal-light">{{ plan.name }}</span>
             <span v-if="plan.category" class="px-3 py-1.5 text-xs font-bold rounded-lg" :class="plan.badgeClass"
               :style="plan.name === 'RD10' ? 'background: linear-gradient(135deg, #1e3a5f 0%, #14b8a6 100%);' : ''">
               {{ plan.category }}
@@ -179,11 +179,11 @@
           <div class="grid grid-cols-2 gap-3 text-sm">
             <div>
               <span class="text-ridder-grey dark:text-gray-400 text-xs">USD:</span>
-              <p class="font-semibold text-ridder-blue dark:text-ridder-teal-light mt-1 text-base tabular-nums">${{ formatCurrency(plan.usd) }}</p>
+              <p class="font-semibold  dark:text-ridder-teal-light mt-1 text-base tabular-nums">${{ formatCurrency(plan.usd) }}</p>
             </div>
             <div>
               <span class="text-ridder-grey dark:text-gray-400 text-xs">MTS:</span>
-              <p class="font-semibold text-ridder-blue dark:text-ridder-teal-light mt-1 text-base tabular-nums">${{ formatCurrency(plan.mts) }}</p>
+              <p class="font-semibold  dark:text-ridder-teal-light mt-1 text-base tabular-nums">${{ formatCurrency(plan.mts) }}</p>
             </div>
             <div>
               <span class="text-ridder-grey dark:text-gray-400 text-xs">手数/每月:</span>
@@ -208,7 +208,7 @@
           style="animation-delay: 0.6s;">
           <div class="flex items-center justify-between mb-6 md:mb-8 pb-3 md:pb-4 border-b border-gray-100 dark:border-gray-700">
             <div>
-              <h3 class="text-lg md:text-2xl font-bold text-ridder-blue dark:text-ridder-teal-light mb-0.5 md:mb-1">手数佣金结算</h3>
+              <h3 class="text-lg md:text-2xl font-bold  dark:text-ridder-teal-light mb-0.5 md:mb-1">手数佣金结算</h3>
               <p class="text-xs text-ridder-grey dark:text-gray-400 font-medium">Lot Commission Settlement</p>
             </div>
             <div class="w-8 md:w-10 h-1 rounded-full" style="background: linear-gradient(90deg, #1e3a5f 0%, #14b8a6 100%);">
@@ -224,7 +224,7 @@
                   <span class="text-white font-bold text-xs md:text-sm">{{ level.name }}</span>
                 </div>
                 <div class="flex-1 min-w-0">
-                  <p class="font-bold text-base md:text-lg text-ridder-blue dark:text-ridder-teal-light">{{ level.name }}</p>
+                  <p class="font-bold text-base md:text-lg  dark:text-ridder-teal-light">{{ level.name }}</p>
                   <p class="text-xs text-ridder-grey dark:text-gray-400 truncate">{{ level.fullName }}</p>
                 </div>
               </div>
@@ -240,7 +240,7 @@
           style="animation-delay: 0.6s;">
           <div class="flex items-center justify-between mb-6 md:mb-8 pb-3 md:pb-4 border-b border-gray-100 dark:border-gray-700">
             <div>
-              <h3 class="text-lg md:text-2xl font-bold text-ridder-blue dark:text-ridder-teal-light mb-0.5 md:mb-1">分红佣金</h3>
+              <h3 class="text-lg md:text-2xl font-bold  dark:text-ridder-teal-light mb-0.5 md:mb-1">分红佣金</h3>
               <p class="text-xs text-ridder-grey dark:text-gray-400 font-medium">Profit Sharing Commission</p>
             </div>
             <div class="w-8 md:w-10 h-1 rounded-full" style="background: linear-gradient(90deg, #1e3a5f 0%, #14b8a6 100%);">
@@ -256,7 +256,7 @@
                   <span class="text-white font-bold text-xs md:text-sm">{{ level.name }}</span>
                 </div>
                 <div class="flex-1 min-w-0">
-                  <p class="font-bold text-base md:text-lg text-ridder-blue dark:text-ridder-teal-light">{{ level.name }}</p>
+                  <p class="font-bold text-base md:text-lg  dark:text-ridder-teal-light">{{ level.name }}</p>
                   <p class="text-xs text-ridder-grey dark:text-gray-400 truncate">{{ level.fullName }}</p>
                 </div>
               </div>
@@ -272,46 +272,140 @@
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 p-5 md:p-8 animate-fade-in-up"
         style="animation-delay: 0.8s;">
         <div class="flex items-center justify-between mb-6 md:mb-8 pb-3 md:pb-4 border-b border-gray-100 dark:border-gray-700">
-          <div>
-            <h3 class="text-lg md:text-2xl font-bold text-ridder-blue dark:text-ridder-teal-light mb-0.5 md:mb-1">人工智能收益分红配比例</h3>
-            <p class="text-xs text-ridder-grey dark:text-gray-400 font-medium">AI Profit Distribution Ratio</p>
+          <div class="flex-1">
+            <div class="flex items-center space-x-2 md:space-x-3 mb-2">
+              <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center shadow-md"
+                style="background: linear-gradient(135deg, #1e3a5f 0%, #14b8a6 100%);">
+                <svg class="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 class="text-lg md:text-2xl font-bold  dark:text-ridder-teal-light">人工智能收益分红配比例</h3>
+            </div>
+            <p class="text-xs md:text-sm text-ridder-grey dark:text-gray-400 font-medium ml-10 md:ml-12">AI Profit Distribution Ratio - Transparent & Automated Allocation</p>
           </div>
           <div class="w-10 md:w-12 h-1 rounded-full" style="background: linear-gradient(90deg, #1e3a5f 0%, #14b8a6 100%);">
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <div
-            class="text-center p-5 md:p-6 bg-gray-50 dark:bg-gray-700/50 rounded-2xl border-2 border-gray-100 dark:border-gray-700 active:border-ridder-blue/30 active:shadow-lg transition-all duration-300 transform active:scale-95 touch-manipulation"
-            style="background: linear-gradient(to bottom right, rgba(20, 184, 166, 0.08), rgba(30, 58, 95, 0.1)); border-color: rgba(20, 184, 166, 0.3);">
-            <div
-              class="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg"
-              style="background: linear-gradient(135deg, #1e3a5f 0%, #14b8a6 100%);">
-              <p class="text-xl md:text-xl font-bold text-white">10%</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
+          <!-- Visual Distribution Chart -->
+          <div class="flex items-center justify-center p-4 md:p-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/30 dark:to-gray-800/50 rounded-2xl border-2 border-gray-200 dark:border-gray-700">
+            <div class="relative w-full max-w-2xl mx-auto flex items-center justify-center">
+              <!-- Donut Chart Visualization -->
+              <div class="relative w-full max-w-lg mx-auto" style="min-height: 400px; max-height: 500px;">
+                <div class="relative w-full h-full" style="aspect-ratio: 1; min-height: 400px;">
+                  <canvas ref="chartCanvas" class="w-full h-full"></canvas>
+                  <!-- Center Text -->
+                  <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                    <p class="text-4xl md:text-5xl font-bold" style="background: linear-gradient(135deg, #1e3a5f 0%, #14b8a6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">100%</p>
+                    <p class="text-base md:text-lg text-ridder-grey dark:text-gray-400 font-medium mt-2">Total Distribution</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="text-sm font-bold mb-1 text-ridder-blue dark:text-ridder-teal-light">集团</p>
-            <p class="text-xs text-ridder-grey/60 dark:text-gray-400">Group</p>
           </div>
-          <div
-            class="text-center p-5 md:p-6 bg-gray-50 dark:bg-gray-700/50 rounded-2xl border-2 border-gray-100 dark:border-gray-700 active:shadow-lg transition-all duration-300 transform active:scale-95 touch-manipulation"
-            style="background: linear-gradient(to bottom right, rgba(20, 184, 166, 0.08), rgba(30, 58, 95, 0.1)); border-color: rgba(20, 184, 166, 0.3);">
-            <div
-              class="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg"
-              style="background: linear-gradient(135deg, #14b8a6 0%, #1e3a5f 100%);">
-              <p class="text-xl md:text-xl font-bold text-white">20%</p>
+
+          <!-- Distribution Details -->
+          <div class="space-y-4 md:space-y-5">
+            <!-- Group Card -->
+            <div class="group relative p-5 md:p-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/30 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-ridder-blue/40 transition-all duration-300 hover:shadow-lg">
+              <div class="flex items-start justify-between">
+                <div class="flex items-start space-x-4 flex-1">
+                  <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center shadow-md flex-shrink-0"
+                    style="background: linear-gradient(135deg, #1e3a5f 0%, #1e3a5f 100%);">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center space-x-2 mb-1">
+                      <h4 class="text-base md:text-lg font-bold  dark:text-ridder-teal-light">集团</h4>
+                      <span class="px-2.5 py-0.5 text-xs font-bold rounded-lg text-white" style="background: linear-gradient(135deg, #1e3a5f 0%, #1e3a5f 100%);">10%</span>
+                    </div>
+                    <p class="text-xs text-ridder-grey dark:text-gray-400 font-medium mb-2">Group / Corporate Reserve</p>
+                    <p class="text-xs text-ridder-grey/70 dark:text-gray-500 leading-relaxed">用于平台运营、技术研发和风险储备资金</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="mt-4 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full rounded-full transition-all duration-500" style="width: 10%; background: linear-gradient(90deg, #1e3a5f 0%, #1e3a5f 100%);"></div>
+              </div>
             </div>
-            <p class="text-sm font-bold mb-1 text-ridder-teal dark:text-ridder-teal-light">奖励</p>
-            <p class="text-xs text-ridder-grey/60 dark:text-gray-400">Reward</p>
+
+            <!-- Reward Card -->
+            <div class="group relative p-5 md:p-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/30 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-ridder-teal/40 transition-all duration-300 hover:shadow-lg">
+              <div class="flex items-start justify-between">
+                <div class="flex items-start space-x-4 flex-1">
+                  <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center shadow-md flex-shrink-0"
+                    style="background: linear-gradient(135deg, #14b8a6 0%, #14b8a6 100%);">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center space-x-2 mb-1">
+                      <h4 class="text-base md:text-lg font-bold text-ridder-teal dark:text-ridder-teal-light">奖励</h4>
+                      <span class="px-2.5 py-0.5 text-xs font-bold rounded-lg text-white" style="background: linear-gradient(135deg, #14b8a6 0%, #14b8a6 100%);">20%</span>
+                    </div>
+                    <p class="text-xs text-ridder-grey dark:text-gray-400 font-medium mb-2">Reward / Incentive Pool</p>
+                    <p class="text-xs text-ridder-grey/70 dark:text-gray-500 leading-relaxed">用于激励优秀经纪人和团队绩效奖励</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="mt-4 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full rounded-full transition-all duration-500" style="width: 20%; background: linear-gradient(90deg, #14b8a6 0%, #14b8a6 100%);"></div>
+              </div>
+            </div>
+
+            <!-- Member Card -->
+            <div class="group relative p-5 md:p-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/30 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-ridder-teal/40 transition-all duration-300 hover:shadow-lg">
+              <div class="flex items-start justify-between">
+                <div class="flex items-start space-x-4 flex-1">
+                  <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center shadow-md flex-shrink-0"
+                    style="background: linear-gradient(135deg, #1e3a5f 0%, #14b8a6 100%);">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center space-x-2 mb-1">
+                      <h4 class="text-base md:text-lg font-bold text-ridder-teal dark:text-ridder-teal-light">会员</h4>
+                      <span class="px-2.5 py-0.5 text-xs font-bold rounded-lg text-white" style="background: linear-gradient(135deg, #1e3a5f 0%, #14b8a6 100%);">70%</span>
+                    </div>
+                    <p class="text-xs text-ridder-grey dark:text-gray-400 font-medium mb-2">Member / User Distribution</p>
+                    <p class="text-xs text-ridder-grey/70 dark:text-gray-500 leading-relaxed">直接分配给所有会员用户，确保最大收益回报</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Progress Bar -->
+              <div class="mt-4 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full rounded-full transition-all duration-500" style="width: 70%; background: linear-gradient(90deg, #1e3a5f 0%, #14b8a6 100%);"></div>
+              </div>
+            </div>
           </div>
-          <div
-            class="text-center p-5 md:p-6 bg-gray-50 dark:bg-gray-700/50 rounded-2xl border-2 border-gray-100 dark:border-gray-700 active:shadow-lg transition-all duration-300 transform active:scale-95 touch-manipulation"
-            style="background: linear-gradient(to bottom right, rgba(30, 58, 95, 0.1), rgba(20, 184, 166, 0.12)); border-color: rgba(20, 184, 166, 0.3);">
-            <div
-              class="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg"
-              style="background: linear-gradient(135deg, #1e3a5f 0%, #14b8a6 100%);">
-              <p class="text-xl md:text-xl font-bold text-white">70%</p>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-100 dark:border-gray-700">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div class="text-center p-4 md:p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/30 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+              <p class="text-xs md:text-sm text-ridder-grey dark:text-gray-400 font-medium mb-1">分配透明度</p>
+              <p class="text-base md:text-lg font-bold  dark:text-ridder-teal-light">100%</p>
+              <p class="text-xs text-ridder-grey/60 dark:text-gray-500 mt-1">Transparency</p>
             </div>
-            <p class="text-sm font-bold mb-1 text-ridder-teal dark:text-ridder-teal-light">会员</p>
-            <p class="text-xs text-ridder-grey/60 dark:text-gray-400">Member</p>
+            <div class="text-center p-4 md:p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/30 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+              <p class="text-xs md:text-sm text-ridder-grey dark:text-gray-400 font-medium mb-1">自动分配</p>
+              <p class="text-base md:text-lg font-bold  dark:text-ridder-teal-light">实时</p>
+              <p class="text-xs text-ridder-grey/60 dark:text-gray-500 mt-1">Real-time</p>
+            </div>
+            <div class="text-center p-4 md:p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/30 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+              <p class="text-xs md:text-sm text-ridder-grey dark:text-gray-400 font-medium mb-1">智能合约</p>
+              <p class="text-base md:text-lg font-bold  dark:text-ridder-teal-light">已启用</p>
+              <p class="text-xs text-ridder-grey/60 dark:text-gray-500 mt-1">Smart Contract</p>
+            </div>
           </div>
         </div>
       </div>
@@ -320,14 +414,25 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useAuthStore } from '@/stores/auth'
 import { useThemeStore } from '@/stores/theme'
 import AppLayout from '@/components/AppLayout.vue'
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend
+} from 'chart.js'
+
+ChartJS.register(ArcElement, Tooltip, Legend)
 
 const authStore = useAuthStore()
 const themeStore = useThemeStore()
 const { theme } = storeToRefs(themeStore)
+const chartCanvas = ref(null)
+let chartInstance = null
 
 const formatCurrency = (value) => {
   if (typeof value === 'string' && value.includes('-')) {
@@ -345,7 +450,7 @@ const brokerPlans = [
     monthlyReturn: '5%-12%',
     yearlyReturn: '$600-$1,440',
     category: '基础资管区',
-    badgeClass: 'bg-ridder-blue/10 text-ridder-blue border border-ridder-blue/20'
+    badgeClass: 'bg-ridder-blue/10  border border-ridder-blue/20'
   },
   {
     name: 'RD3',
@@ -365,7 +470,7 @@ const brokerPlans = [
     monthlyReturn: '8%-16%',
     yearlyReturn: '$4,800-$9,600',
     category: '高级资管区',
-    badgeClass: 'bg-ridder-blue/10 text-ridder-blue border border-ridder-blue/20'
+    badgeClass: 'bg-ridder-blue/10  border border-ridder-blue/20'
   },
   {
     name: 'RD10',
@@ -391,6 +496,96 @@ const profitSharingLevels = [
   { name: 'BIB', fullName: 'Basic Introducing Broker', percentage: 4 },
   { name: 'MIB', fullName: 'Master Introducing Broker', percentage: 6 }
 ]
+
+// Chart data and configuration
+const chartData = {
+  labels: ['集团 (Group)', '奖励 (Reward)', '会员 (Member)'],
+  datasets: [{
+    data: [10, 20, 70],
+    backgroundColor: [
+      '#1e3a5f',      // Dark blue for Group (10%)
+      '#14b8a6',      // Teal for Reward (20%)
+      '#0d9488'       // Darker teal for Member (70%) - more distinct
+    ],
+    borderColor: [
+      '#ffffff',      // White border for Group
+      '#ffffff',      // White border for Reward
+      '#ffffff'       // White border for Member
+    ],
+    borderWidth: 4,
+    hoverOffset: 10,
+    hoverBorderWidth: 5
+  }]
+}
+
+const chartOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  cutout: '55%',
+  spacing: 4,
+  plugins: {
+    legend: {
+      display: false
+    },
+    tooltip: {
+      enabled: true,
+      backgroundColor: 'rgba(0, 0, 0, 0.85)',
+      padding: 14,
+      titleFont: {
+        size: 15,
+        weight: 'bold'
+      },
+      bodyFont: {
+        size: 14
+      },
+      callbacks: {
+        label: function(context) {
+          const label = context.label || ''
+          const value = context.parsed || 0
+          return `${label}: ${value}%`
+        }
+      },
+      displayColors: true,
+      boxPadding: 6
+    }
+  },
+  animation: {
+    animateRotate: true,
+    animateScale: true,
+    duration: 1200,
+    easing: 'easeOutQuart'
+  }
+}
+
+// Initialize chart
+onMounted(() => {
+  // Use nextTick to ensure DOM is ready
+  nextTick(() => {
+    if (chartCanvas.value) {
+      const ctx = chartCanvas.value.getContext('2d')
+      chartInstance = new ChartJS(ctx, {
+        type: 'doughnut',
+        data: chartData,
+        options: chartOptions
+      })
+    }
+  })
+})
+
+// Cleanup chart on unmount
+onBeforeUnmount(() => {
+  if (chartInstance) {
+    chartInstance.destroy()
+    chartInstance = null
+  }
+})
+
+// Update chart when theme changes
+watch(theme, () => {
+  if (chartInstance) {
+    chartInstance.update()
+  }
+})
 </script>
 
 <style scoped>

@@ -25,7 +25,7 @@
       <!-- Moon Icon -->
       <svg
         v-else
-        class="w-3.5 h-3.5 text-ridder-blue"
+        class="w-3.5 h-3.5 "
         fill="currentColor"
         viewBox="0 0 20 20"
       >

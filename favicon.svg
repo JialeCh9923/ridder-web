@@ -1,0 +1,71 @@
+<svg width="32" height="32" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top Section - Dark Blue -->
+  <g>
+    <!-- Top center diamond -->
+    <path d="M80 15 L95 30 L80 45 L65 30 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+
+    <!-- Top left diamond -->
+    <path d="M50 30 L65 45 L50 60 L35 45 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+
+    <!-- Top right diamond -->
+    <path d="M110 30 L125 45 L110 60 L95 45 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+
+    <!-- Far left diamond -->
+    <path d="M20 45 L35 60 L20 75 L5 60 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+
+    <!-- Far right diamond -->
+    <path d="M140 45 L155 60 L140 75 L125 60 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+
+    <!-- Middle left diamond -->
+    <path d="M35 60 L50 75 L35 90 L20 75 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+
+    <!-- Center diamond -->
+    <path d="M65 60 L80 75 L65 90 L50 75 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+
+    <!-- Middle right diamond -->
+    <path d="M95 60 L110 75 L95 90 L80 75 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+
+    <!-- Far right middle diamond -->
+    <path d="M125 60 L140 75 L125 90 L110 75 Z" fill="#0A5278" stroke="#0A5278" stroke-width="1.5" />
+  </g>
+
+  <!-- Bottom Section - Teal/Turquoise -->
+  <g>
+    <!-- Far left bottom diamond -->
+    <path d="M20 85 L35 100 L20 115 L5 100 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Lower left diamond -->
+    <path d="M35 70 L50 85 L35 100 L20 85 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Center left diamond -->
+    <path d="M50 85 L65 100 L50 115 L35 100 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Center diamond -->
+    <path d="M65 70 L80 85 L65 100 L50 85 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Center main diamond -->
+    <path d="M80 85 L95 100 L80 115 L65 100 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Center right diamond -->
+    <path d="M95 70 L110 85 L95 100 L80 85 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Lower right diamond -->
+    <path d="M110 85 L125 100 L110 115 L95 100 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Far right bottom diamond -->
+    <path d="M125 70 L140 85 L125 100 L110 85 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Far far right diamond -->
+    <path d="M140 85 L155 100 L140 115 L125 100 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Bottom center diamond -->
+    <path d="M80 115 L95 130 L80 145 L65 130 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Bottom left diamond -->
+    <path d="M50 100 L65 115 L50 130 L35 115 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+
+    <!-- Bottom right diamond -->
+    <path d="M110 100 L125 115 L110 130 L95 115 Z" fill="#14A89C" stroke="#14A89C" stroke-width="1.5" />
+  </g>
+</svg>
+
