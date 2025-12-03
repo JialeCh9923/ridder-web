@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
@@ -42,6 +43,11 @@ export default {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 3s ease-in-out infinite',
         'gradient': 'gradient 8s ease infinite',
+        'float-slow': 'floatSlow 20s ease-in-out infinite',
+        'float-slow-reverse': 'floatSlowReverse 25s ease-in-out infinite',
+        'float-particle': 'floatParticle 30s ease-in-out infinite',
+        'line-sweep': 'lineSweep 15s linear infinite',
+        'line-sweep-delayed': 'lineSweep 20s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -75,6 +81,27 @@ export default {
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+        },
+        floatSlow: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '33%': { transform: 'translate(30px, -30px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+        },
+        floatSlowReverse: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '33%': { transform: 'translate(-30px, 30px) scale(0.9)' },
+          '66%': { transform: 'translate(20px, -20px) scale(1.1)' },
+        },
+        floatParticle: {
+          '0%, 100%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+          '25%': { transform: 'translate(-45%, -55%) scale(1.1) rotate(90deg)' },
+          '50%': { transform: 'translate(-55%, -45%) scale(0.9) rotate(180deg)' },
+          '75%': { transform: 'translate(-50%, -50%) scale(1.05) rotate(270deg)' },
+        },
+        lineSweep: {
+          '0%': { opacity: '0', transform: 'translateX(-100%)' },
+          '50%': { opacity: '1', transform: 'translateX(0%)' },
+          '100%': { opacity: '0', transform: 'translateX(100%)' },
         },
       },
       backgroundImage: {

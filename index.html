@@ -7,8 +7,27 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="theme-color" content="#1e3a5f" />
+    <script>
+      // Initialize theme immediately to prevent flash - default to light theme
+      (function() {
+        // Always remove dark class first to ensure clean state
+        document.documentElement.classList.remove('dark');
+        
+        const saved = localStorage.getItem('theme');
+        // Default to 'light' theme, only use saved preference if exists and is valid
+        const theme = (saved === 'dark' || saved === 'light') ? saved : 'light';
+        
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+        // If light, dark class is already removed above
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Primary: DM Sans - Excellent for financial data and numbers -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap" rel="stylesheet">
+    <!-- Fallback: Inter - Great alternative -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>RIDDER Trader Group - 经纪人平台</title>
   </head>
