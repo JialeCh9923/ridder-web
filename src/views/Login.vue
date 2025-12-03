@@ -243,7 +243,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import Logo from '@/components/Logo.vue'
@@ -257,6 +257,7 @@ const password = ref('')
 const loading = ref(false)
 const error = ref('')
 const showSuccess = ref(false)
+const navigationTimeout = ref(null)
 
 const handleLogin = async () => {
   loading.value = true
@@ -275,7 +276,7 @@ const handleLogin = async () => {
     showSuccess.value = true
     
     // Wait for animation, then navigate
-    setTimeout(() => {
+    navigationTimeout.value = setTimeout(() => {
       router.push('/')
     }, 1500)
   } catch (err) {
@@ -283,6 +284,14 @@ const handleLogin = async () => {
     loading.value = false
   }
 }
+
+// Clean up navigation timeout if component unmounts
+onBeforeUnmount(() => {
+  if (navigationTimeout.value) {
+    clearTimeout(navigationTimeout.value)
+    navigationTimeout.value = null
+  }
+})
 </script>
 
 <style scoped>
@@ -382,4 +391,3 @@ const handleLogin = async () => {
   }
 }
 </style>
-
