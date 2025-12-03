@@ -422,11 +422,12 @@ import AppLayout from '@/components/AppLayout.vue'
 import {
   Chart as ChartJS,
   ArcElement,
+  DoughnutController,
   Tooltip,
   Legend
 } from 'chart.js'
 
-ChartJS.register(ArcElement, Tooltip, Legend)
+ChartJS.register(ArcElement, DoughnutController, Tooltip, Legend)
 
 const authStore = useAuthStore()
 const themeStore = useThemeStore()

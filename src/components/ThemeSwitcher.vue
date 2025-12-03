@@ -86,4 +86,3 @@ const handleToggle = async () => {
   min-width: 3rem;
 }
 </style>
-
