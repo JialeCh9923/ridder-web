@@ -137,4 +137,3 @@ export const useThemeStore = defineStore('theme', () => {
     applyTheme
   }
 })
-
