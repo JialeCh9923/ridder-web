@@ -268,6 +268,9 @@ const handleLogin = async () => {
       password: password.value
     })
     
+    // Reset loading state after successful login
+    loading.value = false
+    
     // Show success animation
     showSuccess.value = true
     
